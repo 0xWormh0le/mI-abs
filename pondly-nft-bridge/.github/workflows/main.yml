@@ -1,0 +1,44 @@
+name: CI
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the dev branch
+  pull_request:
+    branches: "**"
+    paths: "**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Install package
+        run: |
+          npm install --no-lockfile
+
+      - name: Compile
+        run: |
+          mv artifacts/contracts artifacts-existing
+          npx hardhat clean
+          npx hardhat compile
+          warning_count=$(npx hardhat compile --force 2>&1 | grep Warning: | wc -l)
+          if [[ $warning_count -gt 0 ]]; then
+            return 1
+          fi
+
+      - name: Check artifacts
+        run: |
+          diff=$(diff -arq artifacts/contracts artifacts-existing)
+          if [[ $diff != "" ]]; then
+            return 1
+          fi
+
+      - name: Test
+        run: |
+          npx hardhat test
+
+      - name: Eslint
+        run: |
+          npm run lint
