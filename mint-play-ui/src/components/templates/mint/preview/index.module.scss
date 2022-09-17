@@ -1,0 +1,81 @@
+@import "assets/scss/abstracts/variables";
+
+.wrapper {
+  border-radius: 16px;
+  height: fit-content;
+  border: solid 1px $colorBorder;
+  padding: 40px;
+  .title {
+    font-size: $fontXL;
+    color: $colorWhite;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin: 20px 0px;
+  }
+  .items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    margin-bottom: 5px;
+    align-items: center;
+  }
+  .name {
+    font-weight: 600;
+  }
+  .editionCount {
+    font-size: $fontS;
+  }
+  .price {
+    padding: 7px 9px;
+    color: $colorGreen;
+    font-size: $fontXs;
+    font-weight: 700;
+    border: solid 2px $colorGreen;
+    border-radius: 50px;
+  }
+  .divider {
+    border: none;
+    height: 1px;
+    background-color: $colorBorder;
+  }
+  .avatargroup {
+    display: flex;
+    padding-left: 10px;
+  }
+  .avatar {
+    border-radius: 50%;
+    border: solid 2px $colorBackground;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    margin-left: -10px;
+    box-sizing: content-box;
+  }
+  .new {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    color: $colorGray;
+    font-size: $fontXs;
+    margin-top: 12px;
+  }
+  .clear {
+    color: $colorGray;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 48px;
+    font-weight: 700;
+    .close {
+      height: 25px;
+      margin-right: 10px;
+    }
+  }
+  @media only screen and (max-width: $breakpointTablet) {
+    display: none;
+  }
+}

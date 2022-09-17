@@ -1,0 +1,18 @@
+@import '../../../assets/scss/base/shared';
+
+.wrap {
+}
+
+.header {
+  display: flex;
+  border: 2px solid $colorBorder;
+  border-radius: 20px;
+  padding: 4px 41px;
+  justify-content: space-between;
+}
+
+.content {
+  margin-top: $gapM;
+  margin-bottom: 0px;
+  min-height: 10rem;
+}

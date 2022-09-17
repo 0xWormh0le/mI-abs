@@ -1,0 +1,14 @@
+@import "assets/scss/abstracts/variables";
+
+.crypto {
+  font-weight: 700;
+  font-size: $fontXs;
+  color: $colorGreen;
+  line-height: pxToRem(16);
+  border: 2px solid $colorGreen;
+  border-radius: 2em;
+  padding: 3px 9px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}

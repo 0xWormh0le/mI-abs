@@ -1,0 +1,81 @@
+@import '../../assets/scss/base/shared';
+
+.container {
+  margin-top: pxToRem(100);
+  margin-bottom: pxToRem(100);
+  display: grid;
+  grid-template-columns: pxToRem(257) auto;
+  grid-column-gap: $gapXL;
+  @media only screen and (max-width: $breakpointTablet) {
+    grid-template-columns: 100%;
+  }
+}
+.sidebar {
+  position: fixed;
+  top: 160px;
+  z-index: 10;
+  padding-top: 20px;
+  background-color: $colorBackgroundDark;
+  @media only screen and (max-width: $breakpointTablet) {
+    width: calc(100% - 40px);
+    max-width: 720px;
+    top: 60px;
+  }
+}
+.sidebar-base {
+  width: 100%;
+  height: 60px;
+}
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: $gapXL;
+  grid-row-gap: $gapXL;
+  @media only screen and (max-width: $breakpointPhone) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: $gapXs;
+  }
+}
+.search {
+  position: relative;
+  input {
+    background: transparent;
+    width: 100%;
+    border: 2px solid $colorBorder;
+    border-radius: 12px;
+    color: $colorWhite;
+    padding: $gapXs $gapXL $gapXs $gapS;
+    font-weight: 600;
+    font-style: $gapXs;
+
+    &:focus {
+      border-color: $colorWhite;
+    }
+  }
+  &::after {
+    content: url("../../assets/svg/search.svg");
+    position: absolute;
+    right: 11px;
+    top: 10px;
+  }
+};
+
+.load {
+  margin-top: $gapXxxL;
+  text-align: center;
+}
+
+.spinner {
+  line-height: 8px;
+  margin-right: $gapXs;
+
+  &.spinning {
+    animation: spin 4s linear infinite;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

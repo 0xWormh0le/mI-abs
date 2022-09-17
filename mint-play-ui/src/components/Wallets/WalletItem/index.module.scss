@@ -1,0 +1,87 @@
+@import '../../../assets/scss/base/shared.scss';
+
+.walletItem {
+  width: 100%;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover,
+  &.active {
+    border-color: #353945;
+
+    &::after {
+      opacity: 1;
+      transition: 0.25s;
+    }
+  }
+
+  &:after {
+    position: absolute;
+    right: 36px;
+    opacity: 0;
+    content: url('../../../assets/svg/wallet-arrow-right.svg');
+  }
+
+  @media only screen and (max-width: $breakpointPhone){
+    padding: 5px;
+    border-radius: 52px;
+    margin-bottom: 18px;
+  }
+}
+
+.iconWrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.nami {
+    background: #9757D7;
+
+    &:before {
+      display: block;
+      width: 26px;
+      height: 26px;
+      content: url('../../../assets/svg/wallet-nami.svg');
+    }
+  }
+
+  &.active {
+    border-color: #3772FF;
+
+    &:before {
+      display: block;
+      position: relative;
+      top: -3px;
+      width: 18px;
+      height: 13px;
+      content: url('../../../assets/svg/wallet-check.svg');
+    }
+  }
+
+  @media only screen and (max-width: $breakpointPhone){
+    width: 56px;
+    height: 56px;
+
+    &.nami {
+      &:before {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+.walletName {
+  margin-left: 32px;
+  font-size: pxToRem(24);
+  font-family: $semiBold;
+}

@@ -1,0 +1,107 @@
+@import '../../../assets/scss/base/shared';
+
+.getPaidWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  max-width: 680px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $breakpointPhone){
+    padding: 30px 0 16px;
+  }
+}
+
+.getPaidHeader {
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+
+  @media only screen and (max-width: $breakpointPhone){
+    padding: 0 16px;
+  }
+}
+
+.getPaidTitle {
+  font-weight: $bold;
+  font-size: pxToRem(48);
+  line-height: 1.15;
+  margin-bottom: 16px;
+
+  span {
+    color: $colorGreen;
+    font-style: italic;
+  }
+
+  @media only screen and (max-width: $breakpointPhone){
+    font-size: pxToRem(34);
+  }
+
+}
+
+.getPaidText {
+  color: $colorGray;
+  font-size: pxToRem(14);
+  line-height: 1.8;
+  margin-bottom: 40px;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+.buttonIcon {
+  position: absolute;
+  top: 12px;
+  left: 50px;
+
+  svg {
+    fill: $colorDark;
+  }
+
+  @media only screen and (max-width: $breakpointPhone){
+    display: none;
+  }
+}
+
+.getPaidImage {
+  width: 660px;
+  max-width: 100%;
+  margin-top: -20px;
+
+  @media only screen and (max-width: $breakpointPhone){
+    max-width: 90%;
+    margin-top: 0;
+  }
+}
+
+.userNameWrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.userName {
+  display: inline-flex;
+  color: $colorWhite;
+  font-family: $semiBold;
+  margin-top: 10px;
+
+  svg {
+    display: inline-block;
+    fill: $colorGreen;
+    margin-right: 8px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.getPaidButton {
+  margin-bottom: 15px;
+}
+
+.userNameIcon {
+  // margin-right: -15px;
+}

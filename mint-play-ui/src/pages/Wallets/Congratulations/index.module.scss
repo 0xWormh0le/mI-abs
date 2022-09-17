@@ -1,0 +1,58 @@
+@import '../../../assets/scss/base/shared';
+
+.congratulations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  max-width: 780px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $breakpointPhone){
+    padding: 30px 0 16px;
+  }
+}
+
+.congratulationsHeader {
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: center;
+
+  @media only screen and (max-width: $breakpointPhone){
+    margin-bottom: 30px;
+  }
+}
+
+.congratulationsTitle {
+  font-weight: $bold;
+  font-size: pxToRem(46);
+  line-height: 1.15;
+  margin-bottom: 40px;
+
+  span {
+    color: $colorGreen;
+    font-style: italic;
+  }
+
+  @media only screen and (max-width: $breakpointPhone){
+    font-size: pxToRem(34);
+    margin-bottom: 30px;
+  }
+}
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $breakpointPhone) {
+    max-width: 450px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    button {
+      margin: 0 10px 10px;
+    }
+  }
+}

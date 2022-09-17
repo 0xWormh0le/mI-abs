@@ -1,0 +1,57 @@
+@import '../../../assets/scss/base/shared.scss';
+
+.termsWrapper {
+  width: 450px;
+
+  @media only screen and (max-width: $breakpointTablet){
+    width: 100%;
+  }
+}
+
+.termsTitle {
+  font-size: pxToRem(40);
+  font-weight: $bold;
+
+  @media only screen and (max-width: $breakpointPhone) {
+    font-size: pxToRem(34);
+  }
+}
+
+.termsTitleNote {
+  color: $colorGray;
+  margin-top: 8px;
+  font-size: pxToRem(12);
+
+  .link {
+    color: $colorWhite;
+    font-family: $semiBold;
+  }
+}
+
+.termsImage {
+  margin: 60px 0 40px;
+  max-width: 100%;
+
+  @media only screen and (max-width: $breakpointPhone) {
+    margin: 30px 0 20px;
+  }
+}
+
+.cancelButton {
+  margin-right: 8px;
+}
+
+.buttons {
+  margin-top: 40px;
+
+  @media only screen and (max-width: $breakpointPhone) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+
+    button {
+      margin-top: 8px;
+    }
+  }
+}

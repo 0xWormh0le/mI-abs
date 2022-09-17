@@ -1,0 +1,61 @@
+@import '../../../assets/scss/base/shared';
+.wrap {
+
+  [class$="-control"] {
+    background: $colorBackgroundDark;
+    width: 100%;
+    appearance: none;
+    border: 2px solid $colorBorder;
+    border-radius: 12px;
+
+
+    &:focus, &:hover {
+      border-color: $colorWhite;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  [class$="-indicatorContainer"] {
+    padding: 6px 8px;
+    line-height: 0;
+    pointer-events: none;
+  }
+
+  [class$="-singleValue"] {
+    color: $colorWhite;
+    font-weight: 400;
+    font-size: $fontS;
+    text-align: center;
+  }
+
+  [class$="-indicatorSeparator"] {
+    display: none;
+  }
+
+  [class$="-menu"] {
+    background: $colorBackground;
+  }
+
+  [class$="-option"] {
+    background: $colorBackground;
+    text-align: center;
+
+    &:hover, &:focus {
+      background: $colorBackgroundDark;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+}
+
+.label {
+  text-transform: uppercase;
+  margin-bottom: $gapXs;
+  font-weight: $bold;
+  font-size: $fontXs;
+  color: $colorLabel;
+}
+

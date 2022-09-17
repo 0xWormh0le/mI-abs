@@ -1,0 +1,53 @@
+@import "functions";
+//-------- FONTS
+$light: 300;
+$regular: 400;
+$semiBold: 600;
+$bold: 700;
+$black: 900;
+$goldplay: Goldplay, sans-serif;
+$poppins: Poppins, sans-serif;
+$textColor: #FCFCFD;
+
+$fontXs: pxToRem(12);
+$fontS: pxToRem(14);
+$fontM: pxToRem(16);
+$fontL: pxToRem(20);
+$fontXL: pxToRem(24);
+$fontXxL: pxToRem(32);
+$fontXxxL: pxToRem(40);
+
+//-------- COLORS
+$colorBorder: #353945;
+$colorGray: #777e90;
+$colorGreen: #2cd138;
+$colorRed: #ef466f;
+$colorWhite: #fcfcfd;
+$colorBackground: #23262f;
+$colorBackgroundDark: #141416;
+$colorBackdrop: rgba(35, 38, 47, 0.9);
+$darkGreen: #00bc82;
+$colorDark: #141416;
+$lightborder: #353945;
+$light: #e6e8ec;
+$colorLabel: #b1b5c4;
+$colorLightBorder: #353945;
+$colorLight: #e6e8ec;
+$colorWhite: #fcfcfd;
+$colorDarkText: #23262f;
+
+// MEDIA BREAKPOINTS
+$breakpointLaptop: 1329px;
+$breakpointTablet: 1023px;
+$breakpointPhone: 767px;
+$breakpointSmallPhone: 414px;
+
+// PADDINGS GAPS
+$gapXxs: pxToRem(8);
+$gapXs: pxToRem(12);
+$gapS: pxToRem(16);
+$gapM: pxToRem(20);
+$gapL: pxToRem(26);
+$gapXL: pxToRem(32);
+$gapXxL: pxToRem(40);
+$gapXxxL: pxToRem(48);

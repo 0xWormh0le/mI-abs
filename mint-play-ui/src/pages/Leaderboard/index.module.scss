@@ -1,0 +1,218 @@
+@import "../../assets/scss/base/shared.scss";
+
+
+.title {
+  text-align: center;
+  margin: $gapXxxL auto;
+
+  .logo {
+    max-width: 400px;
+    margin: 0 auto;
+    @media only screen and (max-width: $breakpointPhone) {
+      display: none;
+    }
+  }
+
+  .motto {
+    color: $colorGray;
+    text-transform: uppercase;
+    font-weight: $bold;
+    font-size: $fontXs;
+  }
+
+  .welcomeTitle {
+    font-size: pxToRem(40);
+  }
+}
+
+.board {
+  max-width: 994px;
+  margin: pxToRem(150) auto;
+  @media only screen and (max-width: $breakpointPhone) {
+    margin-top: $gapXxL;
+    margin-bottom: $gapXxL;
+  }
+
+  .header {
+    border-bottom: 3px solid $colorGreen;
+    position: relative;
+
+    h3 {
+      font-size: $fontXxL;
+      font-weight: $semiBold;
+      font-style: italic;
+
+      span {
+        color: $colorGreen;
+      }
+    }
+
+    .findMe {
+      appearance: none;
+      background: transparent;
+      border: none;
+      color: $light;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 6px 0;
+      cursor: pointer;
+
+      &:focus, &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .list {
+    width: 100%;
+    margin-top: $gapM;
+
+    td {
+      border-bottom: 1px solid $colorBorder;
+      text-align: center;
+      padding: $gapS 0;
+    }
+
+    .mobile {
+      display: none;
+      text-align: left;
+      @media only screen and (max-width: $breakpointPhone) {
+        display: table-cell;
+        line-height: 1.8em;
+      }
+    }
+
+    .desktop {
+      @media only screen and (max-width: $breakpointPhone) {
+        display: none;
+      }
+    }
+
+    .hype {
+      display: inline-block;
+      width: 50%;
+    }
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    @media only screen and (max-width: $breakpointPhone) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .pagination {
+    text-align: right;
+    margin-top: $gapS;
+
+    button {
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $light;
+      }
+
+      svg {
+        width: 14px;
+      }
+
+      path {
+        fill: $colorGray;
+      }
+    }
+
+    .prev {
+      margin-right: $gapXxs;
+    }
+
+    .next {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.promo {
+  display: grid;
+  grid-template-columns: 45.5% calc(54.5% - 1em);
+  grid-gap: $gapS;
+  align-items: center;
+  margin-bottom: pxToRem(100);
+  @media only screen and (max-width: $breakpointPhone) {
+    grid-template-columns: 100%;
+    margin-bottom: $gapXxL;
+    min-height: auto;
+  }
+
+  .player {
+    margin-top: $gapXL;
+  }
+
+  .supCTA {
+    text-transform: uppercase;
+    color: $colorGray;
+  }
+
+  .CTA {
+    font-size: pxToRem(64);
+    white-space: nowrap;
+    line-height: pxToRem(64);
+
+    i {
+      font-weight: $semiBold;
+    }
+
+    span {
+      color: $colorGreen;
+    }
+
+    @media only screen and (max-width: $breakpointLaptop) {
+      font-size: pxToRem(54);
+      line-height: pxToRem(54);
+    }
+    @media only screen and (max-width: $breakpointTablet) {
+      font-size: $fontXxL;
+      line-height: $fontXxL;
+    }
+    @media only screen and (max-width: $breakpointPhone) {
+      font-size: $fontXL;
+      line-height: 1.5em;
+    }
+  }
+
+  .subCTA {
+    font-weight: $regular;
+    color: $colorGray;
+    font-size: $fontM;
+    line-height: $fontXL;
+    margin-top: $gapM;
+  }
+
+  .action {
+    margin-top: pxToRem(56);
+
+    &.mobile {
+      display: none;
+    }
+
+    @media only screen and (max-width: $breakpointPhone) {
+      margin: $gapL auto 0;
+      width: 190px;
+      &.desktop {
+        display: none;
+      }
+      &.mobile {
+        display: block;
+      }
+    }
+  }
+
+}
+

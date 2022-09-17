@@ -1,0 +1,30 @@
+@import "../../../assets/scss/base/shared.scss";
+
+.welcomeWrapper {
+  padding: 100px 0 80px;
+
+  @media only screen and (max-width: $breakpointLaptop) {
+    padding: 70px 0 60px;
+  }
+
+  @media only screen and (max-width: $breakpointPhone) {
+    padding: 20px 0 40px;
+  }
+}
+
+
+.welcomeText {
+  font-size: $fontXL;
+  max-width: 720px;
+  margin: 20px 0 50px;
+
+  @media only screen and (max-width: $breakpointLaptop) {
+    font-size: $fontL;
+    margin: 20px 0 40px;
+  }
+
+  @media only screen and (max-width: $breakpointPhone) {
+    font-size: $fontM;
+    margin: 16px 0 24px;
+  }
+}

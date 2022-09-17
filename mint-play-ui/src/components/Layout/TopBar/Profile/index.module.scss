@@ -1,0 +1,30 @@
+@import '../../../../assets/scss/base/shared.scss';
+
+.profileButton {
+  height: 40px;
+  border: 2px solid $colorGray;
+  border-radius: 20px;
+  cursor: pointer;
+  align-items: center;
+  color: $colorWhite;
+  font-weight: 600;
+  font-size: $fontS;
+  margin-left: 29px;
+  display: inline-flex;
+
+  span {
+    padding: 0 18px;
+  }
+
+  @media only screen and (max-width: $breakpointTablet) {
+    margin-left: 20px;
+  }
+}
+
+.profileAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: -6px;
+  margin-left: 2px;
+}

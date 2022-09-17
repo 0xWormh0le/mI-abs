@@ -1,0 +1,63 @@
+@import "../../../assets/scss/base/shared.scss";
+
+.button {
+  background: linear-gradient(180deg, #2cd138 0%, #00bc82 100%);
+  border-radius: 5px;
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 48px;
+  font-size: pxToRem(16);
+  font-weight: $bold;
+  cursor: pointer;
+  position: relative;
+
+  &.small {
+    min-height: 40px;
+    padding: 0 20px;
+    font-size: pxToRem(14);
+    font-family: $semiBold;
+  }
+
+  &.wide {
+    min-width: 350px;
+    padding: 0 44px;
+
+    @media only screen and (max-width: $breakpointLaptop){
+      min-height: 44px;
+      font-weight: $semiBold;
+      font-size: $fontS;
+    }
+
+    @media only screen and (max-width: $breakpointPhone){
+      min-width: auto;
+      padding: 0 20px;
+    }
+  }
+
+  &.big {
+    height: 48px;
+    padding: 0 48px;
+    font-size: $fontM;
+    font-weight: $bold;
+
+    @media only screen and (max-width: $breakpointLaptop) {
+      height: 44px;
+      padding: 0 44px;
+    }
+  }
+
+  &.outlined {
+    background: none;
+    color: $colorWhite;
+    border: 2px solid $colorGray;
+    font-weight: $semiBold;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}

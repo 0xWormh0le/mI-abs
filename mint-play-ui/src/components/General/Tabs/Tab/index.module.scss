@@ -1,0 +1,29 @@
+@import '../../../../assets/scss/base/shared';
+
+.tab {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: $colorGray;
+  margin: 0;
+  padding: 5px 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: $semiBold;
+  font-size: pxToRem(14);
+  cursor: pointer;
+  @media only screen and (max-width: $breakpointPhone) {
+    padding: 5px 10px;
+  }
+
+  &:hover, &:focus {
+    box-shadow: 0 0 1px $light;
+  }
+}
+
+.activeTab {
+  background: $light;
+  color: $colorBackground;
+}

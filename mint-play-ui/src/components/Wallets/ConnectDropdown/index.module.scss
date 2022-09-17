@@ -1,0 +1,114 @@
+@import '../../../assets/scss/base/shared.scss';
+
+.dropdownWrapper {
+  position: relative;
+}
+
+.dropdown {
+  width: 300px;
+  background: #23262F;
+  border-radius: 12px;
+  padding: 16px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 55px;
+
+  &:before {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 12px solid #23262F;
+    content: '';
+  }
+}
+
+.dropdownItem {
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid #353945;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.dropdownItemLink {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: $bold;
+  color: $colorGray;
+
+  &.nami {
+    &:before {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      content: url('../../../assets/svg/nami-menu-icon.svg');
+    }
+  }
+
+}
+
+.walletItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.walletIconWrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  &.nami {
+    background: #349EA3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+      display: block;
+      transform: scale(0.7);
+      width: 26px;
+      height: 26px;
+      content: url('../../../assets/svg/wallet-nami.svg');
+    }
+
+  }
+}
+
+.walletNameWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  width: calc(100% - 40px);
+}
+
+.walletName {
+  font-size: pxToRem(24);
+  font-weight: $bold;
+  color: #fff;
+}
+
+.flashBackground {
+  animation: flashBackground 0.4s linear;
+  border-radius: 8px;
+}
+
+@keyframes flashBackground {
+  50% {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    background-color: transparent;
+  }
+}

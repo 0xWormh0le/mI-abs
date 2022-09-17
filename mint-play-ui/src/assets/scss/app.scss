@@ -1,0 +1,15 @@
+// abstracts
+@use 'abstracts/variables';
+@use 'abstracts/functions';
+@use 'abstracts/text';
+
+// base
+@use 'base/reset';
+@use 'base/typography';
+
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/bootstrap-grid.scss';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+

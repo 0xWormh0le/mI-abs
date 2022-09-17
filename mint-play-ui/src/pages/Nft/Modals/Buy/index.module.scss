@@ -1,0 +1,105 @@
+@import "../shared.module";
+
+.price {
+  margin-top: $gapM;
+  padding: $gapXs 0;
+  border-bottom: 1px solid $colorBorder;
+  display: flex;
+  justify-content: space-between;
+}
+.balance {
+  padding: $gapXs 0;
+  display: flex;
+  justify-content: space-between;
+}
+.metaInfo {
+  color: $colorGray;
+}
+
+.loading {
+  display: grid;
+  grid-template-columns: 40px auto;
+  grid-gap: $gapM;
+  line-height: $fontXL;
+}
+
+.indicator {
+  line-height: 0;
+
+  &.spin {
+    animation: spin 4s linear infinite;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.status {
+}
+
+.description {
+  color: $colorGray;
+}
+
+.gratz {
+  text-align: center;
+  font-size: 48px;
+  font-weight: $semiBold;
+}
+
+.center {
+  text-align: center;
+}
+
+.result {
+  border: 1px solid $colorBorder;
+  border-radius: 12px;
+  margin: $gapXL 0;
+  padding: $gapL;
+
+  table {
+    width: 100%;
+  }
+
+  thead {
+    th {
+      color: $colorGray;
+      font-weight: $regular;
+      text-align: left;
+      width: 50%;
+      font-size: $fontS;
+    }
+  }
+
+  tbody {
+    td {
+      text-align: left;
+      padding: $gapXs 0 0;
+      font-size: $fontS;
+    }
+  }
+}
+
+.success {
+  color: $darkGreen;
+}
+
+.showOff {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.shareIcon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+

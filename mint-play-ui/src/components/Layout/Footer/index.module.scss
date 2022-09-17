@@ -1,0 +1,155 @@
+@import "../../../assets/scss/base/shared.scss";
+
+.footer-wrapper {
+  padding-top: 80px;
+  border-top: 1px solid $colorLightBorder;
+  width: 100%;
+  padding-left: 140px;
+  padding-right: 140px;
+  position: absolute;
+  left: 0;
+
+  @media only screen and (max-width: $breakpointPhone) {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+  }
+
+  @media only screen and (max-width: $breakpointSmallPhone) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+  }
+
+  .footer {
+    margin-left: auto;
+    margin-right: auto;
+    .logo {
+      width: 124px;
+    }
+    .label {
+      font-size: 24px;
+      line-height: 32px;
+      color: #e6e8ec;
+      @media only screen and (max-width: $breakpointPhone) {
+        font-size: 20px;
+      }
+      @media only screen and (max-width: $breakpointSmallPhone) {
+        font-size: 14px;
+      }
+    }
+    h3 {
+      margin-top: 0;
+      font-size: 24px;
+      @media only screen and (max-width: $breakpointPhone) {
+        font-size: pxToRem(14);
+        font-weight: 300;
+        margin-top: 8px;
+      }
+    }
+    .linkItem {
+      color: $colorGray;
+      font-weight: bold;
+    }
+    .header ~ li {
+      font-size: 14px;
+      margin-bottom: 24px;
+      color: $colorGray;
+      font-weight: 700;
+    }
+    .header {
+      margin-bottom: 40px;
+      font-size: 16px;
+      color: #fcfcfd;
+      @media only screen and (max-width: 992px) {
+        display: none;
+      }
+    }
+    .discord {
+      display: flex;
+      .discord-icon {
+        margin-right: 10px;
+      }
+      @media only screen and (max-width: $breakpointPhone) {
+        margin-bottom: 26px !important;
+      }
+    }
+    .first {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 32px;
+      row-gap: $gapXL;
+      column-gap: $gapM;
+      svg {
+        width: 124px;
+        height: 32px;
+      }
+      @media only screen and (max-width: $breakpointPhone) {
+        flex-direction: row;
+      }
+    }
+    .middle {
+      @media only screen and (max-width: $breakpointPhone) {
+        width: 50%;
+        flex-shrink: 0;
+      }
+    }
+    .last {
+      @media only screen and (max-width: $breakpointPhone) {
+        width: 50%;
+        min-width: 160px;
+        flex-shrink: 0;
+        overflow: hidden;
+      }
+
+      .socials {
+        display: flex;
+        align-items: center;
+        column-gap: $gapM;
+        @media only screen and (max-width: $breakpointPhone) {
+          flex-wrap: wrap;
+        }
+        > div {
+          display: flex;
+          gap: $gapM;
+        }
+      }
+      li {
+        margin-bottom: 16px;
+        @media only screen and (max-width: $breakpointPhone) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .bottom {
+      border-top: 1px solid $colorLightBorder;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 33px 0;
+      margin-top: 80px;
+      @media only screen and (max-width: $breakpointPhone) {
+        flex-direction: column;
+        margin-top: 30px;
+        align-items: flex-start;
+      }
+      p {
+        color: $colorGray;
+        font-size: $fontXs;
+      }
+      h4 {
+        font-size: $fontXs;
+        font-weight: 400;
+        @media only screen and (max-width: $breakpointPhone) {
+          margin-top: 20px;
+        }
+      }
+      span {
+        color: $darkGreen;
+        margin-left: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}

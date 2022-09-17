@@ -1,0 +1,83 @@
+@import "../../../assets/scss/base/shared";
+.item {
+  font-size: $fontS;
+}
+.file {
+  width: 100%;
+  margin-bottom: $gapM;
+  position: relative;
+  overflow: hidden;
+  height: 303px;
+  border-radius: 16px;
+  img,
+  video {
+    border-radius: 16px;
+    max-height: 100%;
+    width: 100%;
+  }
+}
+.title {
+  font-size: $fontM;
+  font-weight: 600;
+  line-height: $fontM;
+  grid-area: title;
+  @media only screen and (max-width: $breakpointTablet) {
+    grid-column: 1 / span 2;
+  }
+}
+
+.price {
+  grid-area: price;
+  text-align: right;
+  @media only screen and (max-width: $breakpointTablet) {
+    grid-area: editions;
+    margin-top: $gapXs;
+  }
+}
+
+.divider {
+  border: none;
+  border-bottom: 1px solid $colorBorder;
+  flex-shrink: 0;
+  flex-grow: 1;
+  flex-basis: 100%;
+  margin: $gapXs 0;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: auto 72px;
+  grid-template-areas:
+    "title price"
+    "profiles editions";
+}
+.info {
+}
+.meta {
+  margin-left: auto;
+}
+.profiles {
+  display: flex;
+  margin-top: $gapXs;
+  grid-area: profiles;
+
+  > .user {
+    margin-right: -8px;
+
+    &:first-of-type {
+      margin-left: -2px;
+    }
+  }
+}
+.user {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid $colorBackground;
+}
+.status {
+  font-size: $fontXs;
+  color: $colorGray;
+  font-weight: 400;
+}

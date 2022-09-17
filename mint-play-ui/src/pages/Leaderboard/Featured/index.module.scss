@@ -1,0 +1,318 @@
+@import '../../../assets/scss/base/shared.scss';
+
+.wrap {
+  margin: 0 auto;
+  max-width: 1120px;
+  @media only screen and (max-width: $breakpointLaptop) {
+    margin-left: $gapXL;
+    margin-right: $gapXL;
+  }
+  @media only screen and (max-width: $breakpointPhone) {
+    background: $colorBackground;
+    margin-left: 0;
+    margin-right: 0;
+    padding: $gapM;
+  }
+}
+
+.statCircle {
+  max-width: 176px;
+  margin: 0 auto;
+  @media only screen and (max-width: $breakpointPhone) {
+    width: 75px;
+  }
+}
+
+.title {
+  font-style: italic;
+  font-weight: $semiBold;
+  font-size: pxToRem(48);
+  @media only screen and (max-width: $breakpointPhone) {
+    font-size: $fontXxL;
+  }
+
+  span {
+    color: $colorGreen;
+  }
+}
+
+.card {
+  background: $colorBackground;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: $gapXs;
+  padding: 30px;
+
+  h3 {
+    font-size: $fontXxL;
+  }
+
+  @media only screen and (max-width: $breakpointTablet) {
+    grid-template-columns: 100%;
+    grid-row-gap: $gapL;
+  }
+  @media only screen and (max-width: $breakpointPhone) {
+    padding-left: 0;
+    padding-right: 0;
+    grid-row-gap: 5px;
+  }
+}
+
+.total {
+  text-align: center;
+  .epoch {
+    @media only screen and (max-width: $breakpointPhone) {
+      text-align: left;
+      font-size: $fontL;
+      align-self: end;
+      margin-bottom: 8px;
+    }
+
+    .value {
+      color: $colorGreen;
+    }
+  }
+  .prize {
+    max-width: 350px;
+    margin: $gapM auto;
+    .pool {
+      .value {
+        margin: 0 auto;
+        font-weight: $semiBold;
+        @media only screen and (max-width: $breakpointPhone) {
+          max-width: pxToRem(78);
+        }
+      }
+      .label {
+        position: relative;
+        top: $gapS;
+        line-height: 0;
+        color: $colorGreen;
+        font-size: pxToRem(50);
+        @media only screen and (max-width: $breakpointPhone) {
+          font-size: $fontS;
+          top: 9px;
+        }
+      }
+    }
+
+    grid-area: pool;
+    @media only screen and (max-width: $breakpointPhone) {
+      width: 110px;
+      margin: 0 auto;
+    }
+  }
+
+  .stats {
+    font-size: $fontXL;
+    font-weight: $bold;
+    text-align: left;
+    width: 100%;
+    max-width: 450px;
+    margin: 80px auto 10px;
+    border-collapse: separate;
+    border-spacing: 0 $gapS;
+
+    .value {
+      text-align: right;
+      color: $colorGreen;
+    }
+
+    @media only screen and (max-width: $breakpointPhone) {
+      font-size: $fontS;
+      border-spacing: 0 $gapXxs;
+      font-weight: $semiBold;
+      align-self: start;
+      border-collapse: collapse;
+      margin: 10px auto;
+      td {
+        padding-bottom: 4px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $breakpointPhone) {
+    display: grid;
+    grid-template-columns: 110px auto;
+    grid-template-rows: 50% 50%;
+    grid-column-gap: $gapM;
+    grid-template-areas:
+      'pool info'
+      'pool info';
+  }
+}
+
+.player {
+  text-align: center;
+
+  h3 {
+    @media only screen and (max-width: $breakpointPhone) {
+      display: none;
+    }
+  }
+
+  .stats {
+    margin: $gapM auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 138px 0 88px 0 77px auto;
+    grid-template-areas:
+      '. pay .'
+      '. pay .'
+      'rank pay hype'
+      'rank . hype'
+      'rank . hype'
+      'rank player hype';
+    @media only screen and (max-width: $breakpointPhone) {
+      grid-template-rows: auto 0 0 0 0 auto;
+    }
+  }
+  .pay {
+    grid-area: pay;
+    @media only screen and (max-width: $breakpointPhone) {
+      grid-area: player;
+    }
+
+    .value {
+      font-family: $poppins;
+      font-weight: $semiBold;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    .label {
+      color: $colorGreen;
+      font-size: $fontXL;
+      font-weight: $bold;
+      font-style: italic;
+      font-family: $poppins;
+      @media only screen and (max-width: $breakpointPhone) {
+        font-size: $fontS;
+        line-height: 0;
+        position: relative;
+        top: $gapXxs;
+      }
+    }
+  }
+
+  .rank {
+    grid-area: rank;
+    .value {
+      font-family: $poppins;
+      font-weight: $semiBold;
+      font-style: italic;
+      max-width: 80%;
+      margin: 0 auto;
+      @media only screen and (max-width: $breakpointPhone) {
+        height: 26px;
+        div {
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+  .hype {
+    grid-area: hype;
+    .value {
+      font-family: $poppins;
+      font-weight: $semiBold;
+      font-style: italic;
+      max-width: 90%;
+      margin: 0 auto;
+      @media only screen and (max-width: $breakpointPhone) {
+        height: 26px;
+        div {
+          line-height: 26px;
+        }
+      }
+    }
+  }
+
+  .avatar {
+    grid-area: player;
+    @media only screen and (max-width: $breakpointPhone) {
+      grid-area: pay;
+    }
+
+    .profilePicture {
+      width: 193px;
+      height: 193px;
+      border: 2px solid $colorGreen;
+      @media only screen and (max-width: $breakpointPhone) {
+        width: 104px;
+        height: 104px;
+      }
+    }
+
+    .nickname {
+      font-size: $fontXL;
+      font-weight: $bold;
+      margin-top: $gapL;
+      @media only screen and (max-width: $breakpointPhone) {
+        margin-top: $gapXxs;
+        margin-bottom: $gapS;
+        font-size: $fontXL;
+      }
+    }
+  }
+}
+
+.launchedPlayer {
+  text-align: center;
+  .rankingwrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+    column-gap: $gapXxL;
+    .ranking {
+      width: calc(100% - 20px);
+      font-weight: 600;
+
+      .rank {
+        aspect-ratio: 4 / 3;
+        font-style: italic;
+        font-family: $poppins;
+        div {
+          text-align: center;
+        }
+      }
+
+      .psp {
+        aspect-ratio: 16 /9;
+        font-style: italic;
+        font-family: $poppins;
+        div {
+          text-align: center;
+        }
+      }
+
+      .payout {
+        font-family: $poppins;
+      }
+
+      .label {
+        font-weight: bold;
+        color: $colorGreen;
+        font-size: $fontXL;
+        @media only screen and (max-width: $breakpointPhone) {
+          font-size: $fontM;
+        }
+      }
+    }
+  }
+
+  .claimTabs {
+    width: 330px;
+    height: 330px;
+    padding: 20px 32px;
+    background-color: $colorLightBorder;
+    border-radius: 16px;
+    margin: $gapXL auto 10px;
+
+    header {
+      padding: 0px 65px;
+    }
+  }
+}

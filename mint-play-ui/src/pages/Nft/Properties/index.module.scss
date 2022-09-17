@@ -1,0 +1,40 @@
+@import '../../../assets/scss/base/shared.scss';
+
+.user {
+  display: grid;
+  grid-template-columns: $gapXxxL auto;
+  grid-column-gap: $gapS;
+  padding: $gapS 0;
+  font-size: $fontS;
+}
+
+.profilePicture {
+  line-height: 0;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.status {
+  color: $colorGray;
+  font-weight: $black;
+}
+
+.name {
+  color: $colorWhite;
+  margin-left: $gapS;
+}
+
+.text {
+  color: $colorGray;
+  line-height: $fontXL;
+  margin-top: $gapS;
+}

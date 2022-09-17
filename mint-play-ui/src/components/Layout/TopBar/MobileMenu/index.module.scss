@@ -1,0 +1,147 @@
+@import '../../../../assets/scss/base/shared';
+
+.mobileMenuWrapper {
+  display: none;
+
+  @media only screen and (max-width: $breakpointTablet) {
+    display: flex;
+  }
+}
+
+.mobileMenu {
+  display: none;
+
+  @media only screen and (max-width: $breakpointTablet) {
+    background: $colorDark;
+    border-radius: 20px;
+    width: calc(100% - 40px);
+    position: absolute;
+    z-index: 1100;
+    top: 48px;
+    right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 32px 0;
+  }
+}
+
+.mobileMenuHeader {
+  padding: 0 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.mobileMenuItem {
+  padding: 0 20px 0 66px;
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.mobileMenuLink {
+  color: $colorWhite;
+  font-weight: 600;
+  position: relative;
+
+  &.red {
+    color: #EF466F;
+  }
+
+  &:before {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -42px;
+    top: 0;
+  }
+
+  &.leaderboard {
+    &:before {
+      content: url('../../../../assets/svg/menu-leaderboard.svg');
+    }
+  }
+
+  &.marketplace {
+    &:before {
+      content: url('../../../../assets/svg/menu-marketplace.svg');
+    }
+  }
+
+  &.mint {
+    &:before {
+      content: url('../../../../assets/svg/menu-mint.svg');
+    }
+  }
+
+  &.profile {
+    &:before {
+      content: url('../../../../assets/svg/menu-profile.svg');
+    }
+  }
+
+  &.wallet {
+    &:before {
+      content: url('../../../../assets/svg/menu-wallet.svg');
+    }
+  }
+
+  &.support {
+    &:before {
+      content: url('../../../../assets/svg/menu-support.svg');
+    }
+  }
+
+  &.logout {
+    &:before {
+      content: url('../../../../assets/svg/menu-logout.svg');
+    }
+  }
+
+}
+
+.mobileMenuIcon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -42px;
+  top: 0;
+}
+
+.hamburger {
+  display: none;
+
+  @media only screen and (max-width: $breakpointTablet) {
+    display: inline-flex;
+    cursor: pointer;
+  }
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #23262F;
+  opacity: 0.9;
+  z-index: 1000;
+}
+
+.logo {
+  width: 204px;
+}
+
+.close {
+  cursor: pointer;
+}

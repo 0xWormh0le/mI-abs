@@ -1,0 +1,115 @@
+@import '../../../assets/scss/base/shared';
+
+.wrap {
+  position: relative;
+}
+
+.backdrop {
+  @media only screen and (max-width: $breakpointPhone) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: $colorBackdrop;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.drop {
+  position: absolute;
+  padding: $gapS;
+  background: $colorBackground;
+  top: 90%;
+  right: 0;
+  border-radius: 12px;
+
+  li:not(:first-of-type) .option {
+    border-top: 1px solid $colorBorder;
+    @media only screen and (max-width: $breakpointPhone) {
+      border-top: none;
+    }
+  }
+
+  @media only screen and (max-width: $breakpointPhone) {
+    position: relative;
+    top: auto;
+    width: 100%;
+    margin: 0 $gapM;
+    background: $colorBackgroundDark;
+  }
+}
+
+.close {
+  display: none;
+  position: absolute;
+  top: $gapXL;
+  right: $gapXL;
+  cursor: pointer;
+  stroke: $colorBorder;
+
+  &:hover, &:focus {
+    stroke: $colorWhite;
+  }
+
+  @media only screen and (max-width: $breakpointPhone) {
+    display: block;
+  }
+}
+
+.title {
+  display: none;
+  margin: $gapM $gapXs;
+  @media only screen and (max-width: $breakpointPhone) {
+    display: block;
+  }
+}
+
+.option {
+  width: 100%;
+  appearance: none;
+  border: none;
+  background: transparent;
+  white-space: nowrap;
+  padding: $gapXs;
+  display: flex;
+  line-height: 16px;
+  color: $colorGray;
+  font-weight: $semiBold;
+  cursor: pointer;
+  fill: $colorGray;
+  align-items: center;
+
+  &.error {
+    color: $colorRed;
+    fill: $colorRed;
+  }
+
+  &:hover, &:focus {
+    background: $colorBackgroundDark;
+  }
+
+  @media only screen and (max-width: $breakpointPhone) {
+    color: $colorWhite;
+    fill: $colorWhite;
+    font-size: $fontM;
+    line-height: $fontXL;
+  }
+}
+
+.label {
+  align-self: center;
+}
+
+.icon {
+  flex-basis: 20px;
+  margin-right: $gapS;
+  line-height: 0;
+}

@@ -1,0 +1,91 @@
+@import '../../../assets/scss/base/shared';
+
+.titleWrapper {
+  padding: 100px 0 40px;
+  border-bottom: 2px solid #353945;
+
+  @media only screen and (max-width: $breakpointLaptop){
+    padding: 60px 0 30px;
+  }
+
+  @media only screen and (max-width: $breakpointTablet){
+    padding: 40px 0 30px;
+    border: none;
+  }
+}
+
+.title {
+  font-size: pxToRem(48);
+  color: $colorWhite;
+  font-family: 'Goldplay-Bold';
+  padding-left: 55px;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 27px;
+    width: 24px;
+    height: 15px;
+    background: url('../../../assets/svg/arrow-left.svg');
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+  @media only screen and (max-width: $breakpointTablet){
+    font-size: pxToRem(38);
+  }
+
+  @media only screen and (max-width: $breakpointPhone) {
+    font-size: pxToRem(34);
+    padding-left: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+}
+
+.walletsWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 0 100px;
+
+  @media only screen and (max-width: $breakpointTablet){
+    justify-content: center;
+    padding: 50px 0 0px;
+  }
+
+  @media only screen and (max-width: $breakpointPhone){
+    padding: 0;
+  }
+}
+
+.listWraper {
+  width: 545px;
+
+  @media only screen and (max-width: $breakpointLaptop){
+    width: 45%;
+  }
+
+  @media only screen and (max-width: $breakpointTablet){
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.walletsButton {
+  margin-top: 50px;
+
+  @media only screen and (max-width: $breakpointPhone){
+    margin: 0 auto;
+  }
+}
+
+.buttonWrapper {
+  @media only screen and (max-width: $breakpointPhone){
+    display: flex;
+    justify-content: center;
+  }
+}

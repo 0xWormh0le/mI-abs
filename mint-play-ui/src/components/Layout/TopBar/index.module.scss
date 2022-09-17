@@ -1,0 +1,42 @@
+@import "../../../assets/scss/base/shared.scss";
+
+.topBarWrapper {
+  border-bottom: 1px solid $colorBorder;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 100;
+  background-color: $colorBackgroundDark;
+
+  @media only screen and (max-width: $breakpointTablet) {
+    border: none;
+  }
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+
+  @media only screen and (max-width: $breakpointTablet) {
+    min-height: 70px;
+  }
+}
+
+.menuWrapper {
+  display: flex;
+  align-items: center;
+
+  &.authorized {
+    flex-grow: 1;
+  }
+
+  @media only screen and (max-width: $breakpointTablet) {
+    display: none;
+  }
+}
+
+.logo {
+  width: 124px;
+}

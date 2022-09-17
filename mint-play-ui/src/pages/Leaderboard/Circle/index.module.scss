@@ -1,0 +1,62 @@
+@import 'src/assets/scss/base/shared';
+
+.circle {
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 100%;
+  position: relative;
+
+  .dashed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+.content {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  transform: translate(0, -50%);
+  text-align: center;
+  z-index: 10;
+  div {
+    line-height: 1em;
+  }
+}
+
+.simple {
+  border: solid 10px $darkGreen;
+  border-radius: 300px;
+  aspect-ratio: 1 / 1;
+}
+
+.label {
+  font-size: $fontXL;
+  font-style: italic;
+  margin-left: 20px;
+  margin-top: 4px;
+  display: flex;
+  width: calc(100% - 20px);
+  justify-content: center;
+  @media only screen and (max-width: $breakpointPhone) {
+    font-size: $fontS;
+    margin-top: $gapXxs;
+  }
+  .info {
+    padding: 1px 5px;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

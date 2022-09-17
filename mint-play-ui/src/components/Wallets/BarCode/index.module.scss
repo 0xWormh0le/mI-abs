@@ -1,0 +1,50 @@
+@import '../../../assets/scss/base/shared.scss';
+
+.qrWrapper {
+  padding-top: 10px;
+  width: 450px;
+
+  @media only screen and (max-width: $breakpointTablet){
+   width: 100%;
+  }
+}
+
+.qrTitle {
+  font-size: pxToRem(40);
+  font-weight: $bold;
+
+  @media only screen and (max-width: $breakpointPhone){
+    font-size: pxToRem(34);
+  }
+}
+
+.qrTitleNote {
+  color: $colorGray;
+  margin-top: 8px;
+  font-size: pxToRem(12);
+}
+
+.qrCodeWrapper {
+  width: 450px;
+  height: 450px;
+  border: 83px solid #23262F;
+  border-radius: 16px;
+  margin: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: $breakpointPhone){
+    width: 200px;
+    height: 200px;
+    border: 20px solid #23262F;
+    margin: 24px auto;
+  }
+}
+
+.buttonWrapper {
+  @media only screen and (max-width: $breakpointPhone){
+    display: flex;
+    justify-content: center;
+  }
+}

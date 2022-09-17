@@ -1,0 +1,36 @@
+@import "../../../assets/scss/abstracts/functions";
+@import "../../../assets/scss/abstracts/variables";
+@import "../../../assets/scss/abstracts/text";
+
+
+.tab {
+  background-color: transparent;
+  color: $colorGray;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 15px;
+  font-family: $semiBold;
+  font-size: $fontS;
+  cursor: pointer;
+  @media only screen and (max-width: $breakpointPhone) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.tab-active {
+  background-color: $colorLight;
+  color: $colorDarkText;
+  border-radius: 5px;
+}
+
+.tab-wide {
+  padding-left: 32px;
+  padding-right: 32px;
+  @media only screen and (max-width: $breakpointPhone) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

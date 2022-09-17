@@ -1,0 +1,15 @@
+@import "assets/scss/abstracts/variables";
+
+.wrapper {
+  .label {
+    font-size: $fontXs;
+    font-weight: 700;
+    margin-bottom: 11px;
+    color: $colorLabel;
+  }
+  .helpertext {
+    margin-top: 6px;
+    font-size: $fontXs;
+    color: $colorLabel;
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../../../assets/scss/base/shared';
+
+.menu {
+  margin-right: 40px;
+}
+
+.menuItem {
+  padding: 17px;
+  color: $colorGray;
+  font-weight: bold;
+}
+
+.separator {
+  display: block;
+  width: 2px;
+  height: 40px;
+  background: $colorBorder;
+  margin-right: 15px;
+  margin-left: 35px;
+}
+
+.authorizedWrapper {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}

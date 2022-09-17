@@ -1,0 +1,28 @@
+@import '../../../../assets/scss/base/shared.scss';
+
+.bellIcon {
+  margin: 0 35px;
+  position: relative;
+  top: 4px;
+
+  @media only screen and (max-width: $breakpointTablet) {
+    top: 0;
+    margin: 0 38px 0 0;
+  }
+}
+
+.unread {
+  position: relative;
+
+  &:after {
+    display: block;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $colorGreen;
+    content: '';
+  }
+}

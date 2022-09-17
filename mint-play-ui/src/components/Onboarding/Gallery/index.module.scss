@@ -1,0 +1,83 @@
+@import "../../../assets/scss/base/shared.scss";
+
+.galleryWrapper {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+
+  &:first-child {
+    width: 116%;
+    left: -7%;
+  }
+
+  &:last-child {
+    left: -22%;
+    width: 145%;
+
+    .galleryImmage {
+      width: calc(20% - 24px);
+    }
+  }
+
+  @media only screen and (max-height: 800px) {
+    &:last-child {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: $breakpointLaptop) {
+    &:first-child {
+      width: 100%;
+      left: 12px;
+    }
+
+    &:last-child {
+      display: flex;
+      width: 125%;
+      left: -12%;
+    }
+  }
+
+  @media only screen and (max-width: $breakpointPhone) {
+    &:first-child {
+      width: calc(100% + 8px);
+      left: 0px;
+    }
+
+    &:last-child {
+      .galleryImmage {
+        width: calc(20% - 8px);
+      }
+    }
+  }
+}
+
+.galleryImmage {
+  width: calc(25% - 24px);
+  height: 30vh;
+  border-radius: 10px;
+  margin: 0 24px 24px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media only screen and (max-height: 800px) {
+    margin-bottom: 0px;
+  }
+
+  @media only screen and (max-width: $breakpointLaptop) {
+    margin-bottom: 24px;
+    height: 200px;
+  }
+
+  @media only screen and (max-width: $breakpointTablet) {
+    height: 180px;
+  }
+
+  @media only screen and (max-width: $breakpointPhone) {
+    border-radius: 0px;
+    margin: 0 8px 8px 0;
+    height: 75px;
+    width: calc(25% - 8px);
+  }
+}

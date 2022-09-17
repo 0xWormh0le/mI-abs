@@ -1,0 +1,70 @@
+@import '../../../assets/scss/base/shared.scss';
+
+.input[type="checkbox"]:checked, 
+.input[type="checkbox"]:not(:checked) {
+    display: none;
+}
+
+.input[type="checkbox"]:checked + label, 
+.input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.input[type="checkbox"]:checked + label:before, 
+.input[type="checkbox"]:not(:checked) + label:before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #353945;
+    background-color: #23262F;
+}
+
+.input[type="checkbox"]:checked + label:before, 
+.input[type="checkbox"]:not(:checked) + label:before {
+    border-radius: 4px;
+}
+
+.input[type="checkbox"]:checked + label:after, 
+.input[type="checkbox"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.input[type="checkbox"]:checked + label:after, 
+.input[type="checkbox"]:not(:checked) + label:after {
+    left: 5px;
+    top: 5px;
+    width: 9px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 3px solid $colorGray;
+    border-bottom: 3px solid $colorGray;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.input[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+.input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+.text {
+  padding-left: 12px;
+}

@@ -1,0 +1,12 @@
+@import "../../assets/scss/base/shared";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  column-gap: $gapM;
+  padding-top: 100px;
+  @media only screen and (max-width: $breakpointTablet) {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+  }
+}

@@ -1,0 +1,8 @@
+.onboardingWrapper {
+  overflow: hidden;
+  height: 100vh;
+
+  @media only screen and (max-height: 650px) {
+    height: auto;
+  }
+}

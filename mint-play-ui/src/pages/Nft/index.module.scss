@@ -1,0 +1,144 @@
+@import '../../assets/scss/base/shared.scss';
+
+.purchaseBox {
+  margin-top: 68px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto pxToRem(384);
+  grid-column-gap: pxToRem(96);
+  margin: pxToRem(100) auto;
+
+  @media only screen and (max-width: $breakpointPhone) {
+    grid-template-columns: auto;
+    margin: $gapXxL $gapM;
+  }
+}
+
+.visual {
+  max-width: 100%;
+  border-radius: 16px;
+  text-align: center;
+
+  img {
+    border-radius: 16px;
+    max-height: calc(100vh - 220px);
+  }
+}
+
+.info {
+  position: relative;
+}
+
+.buttons {
+  position: absolute;
+  right: -104px;
+  display: flex;
+  flex-direction: column;
+  gap: $gapS;
+  @media only screen and (max-width: $breakpointPhone) {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    gap: $gapL;
+    margin: $gapS auto $gapL;
+  }
+}
+
+.control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid $colorGray;
+  cursor: pointer;
+  svg {
+    vertical-align: middle;
+  }
+
+  &:hover {
+    background: $colorWhite;
+    border: none;
+  }
+}
+
+.title {
+  font-weight: $bold;
+  font-size: pxToRem(40);
+}
+
+.prices {
+  margin: $gapXxs 0;
+}
+
+@mixin currency($color: $colorGray) {
+  color: $color;
+  border: 2px solid $color;
+  border-radius: 13px;
+  padding: 5px $fontM;
+  font-size: $fontXs;
+  font-weight: $bold;
+  margin-right: 4px;
+}
+
+.crypto {
+  @include currency($colorGreen);
+}
+
+.fiat {
+  @include currency($colorGray);
+}
+
+.description {
+  color: $colorGray;
+  margin: $gapXxL 0;
+}
+
+.purchaseBox {
+  background: #23262f; //TODO: change to var
+  border: 2px solid $colorBorder;
+  border-radius: 16px;
+  padding: $gapXL $gapL $gapL;
+  text-align: center;
+}
+
+.action {
+  border-radius: 90px;
+}
+
+.lastPurchase {
+  display: grid;
+  grid-template-columns: $gapXxxL auto;
+  text-align: left;
+  grid-gap: $gapS;
+  margin-bottom: $gapL;
+}
+
+.profilePicture {
+  img {
+    border-radius: 50%;
+  }
+}
+
+.by {
+  color: $colorGray;
+
+  .name {
+    color: $colorWhite;
+    margin-left: $gapXxs;
+  }
+}
+
+.cost {
+  font-size: $fontXL;
+  font-weight: $semiBold;
+
+  .fiat {
+    margin-left: $gapXxs;
+    color: $colorGray;
+  }
+}

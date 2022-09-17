@@ -1,0 +1,83 @@
+@import '../../../assets/scss/base/shared.scss';
+
+.wrapper {
+  margin-top: -$gapS;
+  .title {
+    line-height: 42px;
+    font-size: $fontXL;
+    font-weight: 600;
+  }
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 210px;
+    .insertWrapper {
+      font-size: $fontXL;
+      font-weight: 600;
+
+      .insertValue {
+        border-radius: 4px;
+        border: solid 2px $colorGray;
+        display: flex;
+        width: 260px;
+        margin: 0px auto;
+
+        input {
+          background: none;
+          color: white;
+          border: none;
+          width: 170px;
+          border-right: solid 2px $colorGray;
+          padding: 5px 15px;
+          font-size: $fontXL;
+          font-weight: 600;
+        }
+
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /* Firefox */
+        input[type='number'] {
+          -moz-appearance: textfield;
+        }
+
+        .label {
+          color: $colorGreen;
+          font-style: italic;
+          width: 90px;
+          padding-top: 3px;
+          flex-shrink: 0;
+          text-align: center;
+        }
+      }
+
+      .arrow {
+        svg {
+          width: 18px;
+          height: 20px;
+        }
+      }
+    }
+
+    .description {
+      font-size: $fontS;
+      padding: 0px 20px;
+    }
+
+    .btnWrapper {
+      .btn {
+        height: 32px;
+        min-height: 32px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: $fontL;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

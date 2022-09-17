@@ -1,0 +1,14 @@
+@import "../../../assets/scss/base/shared.scss";
+
+.wrap {
+  position: relative;
+}
+
+.value {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: $fontXs;
+  font-weight: $semiBold;
+}

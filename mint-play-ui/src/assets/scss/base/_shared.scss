@@ -1,0 +1,39 @@
+@import "../abstracts/variables";
+@import "../abstracts/functions";
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $breakpointLaptop) {
+    max-width: 990px;
+  }
+
+  @media only screen and (max-width: $breakpointTablet) {
+    max-width: 720px;
+  }
+
+  @media only screen and (max-width: $breakpointPhone) {
+    margin: 0 $gapM;
+    width: auto;
+  }
+}
+
+.welcomeTitle {
+  font-size: pxToRem(64);
+  font-weight: 900;
+
+  span {
+    font-style: italic;
+    color: $colorGreen;
+  }
+
+  @media only screen and (max-width: $breakpointLaptop) {
+    font-size: pxToRem(54);
+  }
+
+  @media only screen and (max-width: $breakpointPhone) {
+    font-size: pxToRem(34);
+  }
+}
